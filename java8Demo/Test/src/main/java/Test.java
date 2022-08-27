@@ -21,13 +21,13 @@ public class Test {
         //比如设置成空字符串
 //		FFmpegFrameGrabber grabber = new FFmpegFrameGrabber("");
         //或者随便设置点其他字符串都可以
-        FFmpegFrameGrabber grabber = new FFmpegFrameGrabber("支持eguid原创");
+        FFmpegFrameGrabber grabber = new FFmpegFrameGrabber("desktop");
 		/*参数支持video_size
 		Set the video frame size.
 		framerate
 		Set the grabbing frame rate. Default value is ntsc, corresponding to a frame rate of 30000/1001.
 		*/
-        grabber.setFormat("vfwcap");// 基于gdigrab的输入格式
+        grabber.setFormat("gdigrab");// 基于gdigrab的输入格式
         //可以设置，但是没有效果
 //		grabber.setFrameRate(50);
 //		grabber.setOption("framerate", "50");
