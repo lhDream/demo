@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.lhDream</groupId>
+    <artifactId>processNameDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <description>processNameDemo</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.github.fvarrui</groupId>
+                <artifactId>javapackager</artifactId>
+                <version>1.6.6</version>
+                <executions>
+                    <execution>
+                        <id>bundling-for-windows</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                        <configuration>
+                            <displayName>processNameDemo</displayName>
+                            <name>processNameDemo</name>
+                            <platform>windows</platform>
+                            <!-- 虚拟机参数 -->
+                            <vmArgs>
+                                <arg>-Xms256M</arg>
+                                <arg>-Xmx512M</arg>
+                            </vmArgs>
+                            <mainClass>io.github.MainApp</mainClass>
+                            <!-- optional -->
+                            <!-- 是否将jvm一起打包到程序中 -->
+                            <bundleJre>false</bundleJre>
+                            <!-- jre路径本地路径 -->
+                            <jrePath>${java.home}</jrePath>
+                            <!--是否打包安装包-->
+                            <customizedJre>false</customizedJre>
+                            <copyDependencies>true</copyDependencies>
+                            <generateInstaller>false</generateInstaller>
+                            <forceInstaller>true</forceInstaller>
+                            <winConfig>
+                                <headerType>console</headerType>
+                            </winConfig>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

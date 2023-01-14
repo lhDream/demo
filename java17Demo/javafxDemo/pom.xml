@@ -26,6 +26,11 @@
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>17.0.2</version>
         </dependency>
@@ -59,7 +64,7 @@
                             <jrePath>${java.home}</jrePath>
                             <!--是否打包安装包-->
                             <customizedJre>false</customizedJre>
-                            <copyDependencies>false</copyDependencies>
+                            <copyDependencies>true</copyDependencies>
                             <generateInstaller>false</generateInstaller>
                             <forceInstaller>true</forceInstaller>
                             <winConfig>
