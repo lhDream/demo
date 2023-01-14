@@ -9,7 +9,6 @@ import java.net.URL;
 public class TestPane extends AnchorPane {
 
     public TestPane() throws IOException {
-        System.out.println(this.getClass().getSimpleName());
         String fxmlName = "testPane.fxml";
         URL url = this.getClass().getResource(fxmlName);
         FXMLLoader fxmlLoader = new FXMLLoader(url);
@@ -19,7 +18,7 @@ public class TestPane extends AnchorPane {
     }
 
     public void clickTest(){
-        System.out.println("点击测试");
+        System.out.println("click test button");
     }
 
 }
