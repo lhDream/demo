@@ -69,10 +69,6 @@
                             <vmArgs>
                                 <arg>-Xms256M</arg>
                                 <arg>-Xmx512M</arg>
-                                <arg>-XX:+UseG1GC</arg>
-                                <arg>-XX:MaxMetaspaceSize=512m</arg>
-                                <arg>-XX:CompressedClassSpaceSize=128m</arg>
-                                <arg>-DJASYPT.ENCRYPTOR.PASSWORD=AoDun@2012_2022&amp;$#</arg>
                             </vmArgs>
                             <!-- optional -->
                             <!-- 是否将jvm一起打包到程序中 -->
